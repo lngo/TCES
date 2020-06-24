@@ -12,86 +12,144 @@ Answer in the book
 \section{}
 Answer in the book
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
+\section{10}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
+\section{20}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
+\section{30}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
-\section{14}
+to be added
 \section{}
+to be added
+\section{40}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
+to be added
 \section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{48}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{}
-\section{63}
+to be added
+\section{50}
+to be added
+\section{51}
+We need to prove the three properties of an equivalence relation as follows\footnote{The definition of \textbf{indistinguishable} would be \textbf{not distinguishable}. In the text book, it is defined as  for every string $z$, we have $xz \in L$ whenever $yz \in L$. The word "whenever" should be understood as "when and only when".}
+\begin{itemize}
+	\item \textbf{reflexive}:
+	trivial
+	\item \textbf{symmetric}:
+	trivial (see the footnote)
+	\item  \textbf{transitive}:
+	we need to prove that if $x\equiv_{L}y$ and $y\equiv_{L}x_1$ then  $x\equiv_{L}x_1$. Lets assume that $x\not\equiv_{L}x_1$, i.e. they are distinguishable. Thus there exists a $z_1$ such that $xz_1 \in  L$ but $x_1z_1 \not\in L$ or vice versa.\\ 
+	Lets assume that $x_1z_1 \not\in L$, then $xz_1 \not\in L$, then $yz_1 \not\in L$, it means $y\not\equiv_{L}x_1$, which is a contradiction.\\
+	The case $xz_1 \not\in L$ is similar
+\end{itemize}
+
+\section{52}
+The intuition of the index of $L$ is that if there exists a DFA that recognizes $L$, then when two distinguishable strings parsed by the DFA, the DFA must end in two different states. Because if parsing each of them ends up with the same state, they would be indistinguishable.
+
+Lets assume we have a set $S$ that is pairwise distinguishable by $L$ and has the maximum number of elements, i.e. $|S|$ is the index of $L$. Lets  $i$ denote the index of $L$.
+\begin{itemize}
+	\item \textbf{a.} When the DFA parses a different string of $S$, it must end at a different state. Thus if the index of $L$ is $> k$, then the DFA must have more than $k$ states.
+	\item \textbf{b.} Every string built from $L$'s alphabet must be indistinguishable with one and only one string in $S$. If it is indistinguishable with no string in $S$, the set $S$ combined with that string would be pairwise distinguishable by $L$ and has a higher cardinality than $S$. If it is indistinguishable with more than one string in $S$, then those strings in $S$ are indistinguishable with each other, it is a contradiction. It means that the set of all strings built from $L$'s alphabet are divided into $i$ subsets, each pair of them are not overlapping, i.e. they form a partition of the set of all strings. A string in a subset if indistinguishable with every other string in the same subset, and distinguishable with any string in any other subset.
+	
+	We construct a DFA as follows. First, we associate a state with an above subset. Notice that there must be a subset which contains the empty string $\epsilon$. The state linked to that subset is the start state.
+	
+	We will now design the set of transition. For a string $x$ in a subset linked to the state $x_s$, if $a$ is a letter and $xa$ is in a subset linked to the state $xa_s$ ($x_s$ and $xa_s$ can be the same or different), then the DFA has a transition from $x_s$ to $xa_s$ when $a$ in the input. Notice for any string $x$ and $y$ in the same subset, with the same input $a$ we should make the same transition. Otherwise $x$ and $y$ are distinguishable be cause $xa$ and $ya$ are distinguishable, i.e. there exists a $z$ such that $xaz$ and $yaz$ cant be $\in L$ together.
+	
+	Note that the language $L$ must be one subset of the partition, and the state associated with that subset is actually the accept state of the DFA.
+	\item \textbf{c}. When $L$ has a finite index, in \textbf{b} we have shown that there is a DFA the recognizes $L$, i.e. $L$ is regular. Also, if there is a DFA that has less number of states than the index of $L$ and recognizes $L$, it is a contradiction to \textbf{a}.
+	
+\end{itemize}
+\section{}
+to be added
+\section{}
+to be added
+\section{}
+to be added
+\section{}
+to be added
+\section{}
+to be added
+\section{}
+to be added
+\section{}
+to be added
+\section{60}
+to be added
 \end{document}
